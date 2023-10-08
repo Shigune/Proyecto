@@ -7,9 +7,7 @@ goles_visitante= int(input('Ingrese la cantidad de goles del equipo visitante ')
 tarjetas_local= int(input('Ingrese la cantidad de tarjetas del equipo local '))
 tarjetas_visitante= int(input('Ingrese la cantidad de tarjetas del equipo visitante '))
 
-#Declaracion de variables
-datos_local=[equipo_local,goles_local,tarjetas_local]
-datos_visitante=[equipo_visitante,goles_visitante,tarjetas_visitante]
+#Declaracion de variables.
 empate=goles_local==goles_visitante
 puntos=0
 puntuacion_equipo_local=puntos
