@@ -6,6 +6,14 @@ goles_local= int(input('Ingrese la cantidad de goles del equipo local '))
 goles_visitante= int(input('Ingrese la cantidad de goles del equipo visitante '))
 tarjetas_local= int(input('Ingrese la cantidad de tarjetas del equipo local '))
 tarjetas_visitante= int(input('Ingrese la cantidad de tarjetas del equipo visitante '))
+
+#Declaracion de variables
+datos_local=[equipo_local,goles_local,tarjetas_local]
+datos_visitante=[equipo_visitante,goles_visitante,tarjetas_visitante]
+empate=goles_local==goles_visitante
+puntos=0
+puntuacion_equipo_local=puntos
+puntuacion_equipo_visitante=puntos
 #Titulo
 print ('----------')
 print ('World Cup')
@@ -21,11 +29,25 @@ print('Goles que realizo el equipo visitante:', goles_visitante)
 print('Cantidad de tarjetas del equipo visitante:',tarjetas_visitante)
 print()
 #Resultados, que equipo ganó y si hubo empate. 
-if goles_local>goles_visitante:
+if goles_local>goles_visitante: #Si gana el equipo local
     print('El equipo ganador es ', equipo_local)
-elif goles_visitante>goles_local:
+    print(equipo_local,'Obtiene 3 puntos.')
+    print(equipo_visitante,'Obtiene 0 puntos.')
+    puntuacion_equipo_local+=3
+elif goles_visitante>goles_local: #Si gana el equipo visitante
     print('El equipo ganador es', equipo_visitante)
-if goles_visitante!=goles_local:
-    print('No hubo empate en este partido')
-else:
+    print(equipo_visitante,'Obtiene 3 puntos.')
+    print(equipo_local,'Obtiene 0 puntos.')
+    puntuacion_equipo_visitante+=3
+if empate==True: #Si hay empate, puntuacion final.
     print('Si hubo empate en este partido')
+    print('Ambos equipos obtienen 1 punto.')
+    puntuacion_equipo_local+=1
+    puntuacion_equipo_visitante+=1
+    print('La puntuacion del equipo local es de',puntuacion_equipo_local)
+    print('La puntuacion del equipo visitante es de',puntuacion_equipo_visitante)
+else: #Si no hay empate, puntuacion final.
+    print('No hubo empate en este partido')
+    print()
+    print('La puntuacion del equipo local es de',puntuacion_equipo_local)
+    print('La puntuacion del equipo visitante es de',puntuacion_equipo_visitante)
