@@ -42,6 +42,15 @@ if empate==True: #Si hay empate, puntuacion final.
     print('Ambos equipos obtienen 1 punto.')
     puntuacion_equipo_local+=1
     puntuacion_equipo_visitante+=1
+    if goles_visitante>goles_local:
+        puntuacion_equipo_visitante+=3
+    if goles_local>goles_visitante:
+        puntuacion_equipo_local+=3
+    if goles_visitante==goles_local:
+        if tarjetas_local>tarjetas_visitante:
+            puntuacion_equipo_visitante+=3
+        elif tarjetas_visitante>tarjetas_local:
+            puntuacion_equipo_local+=3
     print('La puntuacion del equipo local es de',puntuacion_equipo_local)
     print('La puntuacion del equipo visitante es de',puntuacion_equipo_visitante)
 else: #Si no hay empate, puntuacion final.
