@@ -1,7 +1,7 @@
 #Solicitud de datos.
 print('--- Ingrese los datos solicitados a continuacion  ---')
 equipo_local= (input('Ingrese el nombre del equipo local '))
-equipo_visitante= (input('Infrese el nombre del equipo visitante '))
+equipo_visitante= (input('Ingrese el nombre del equipo visitante '))
 goles_local= int(input('Ingrese la cantidad de goles del equipo local '))
 goles_visitante= int(input('Ingrese la cantidad de goles del equipo visitante '))
 tarjetas_local= int(input('Ingrese la cantidad de tarjetas del equipo local '))
